@@ -1,14 +1,31 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from './components/Sidebar';
-import MyNavbar from './components/Navbar';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import About from './pages/About';
+import Features from './pages/Features';
+import MainLayout from './layout/MainLayout';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
+
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/features' element={<Features />} />
+
+        <Route path='/*' element={<NotFound />} />
+
+
+      </Route>
+
+    )
+  )
   return (
-    <div className="App">
-      <MyNavbar />
-      <Sidebar />
-    </div>
+
+    <RouterProvider router={router} />
   );
 }
 

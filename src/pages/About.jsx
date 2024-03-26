@@ -1,9 +1,8 @@
-import MyNavbar from "../components/Navbar";
+import MyNavbar from "../components/MyNavbar";
 
 const About = () => {
     return (
         <>
-            <MyNavbar />
             <h1>About</h1>
             <p>This is the about page.</p>
         </>

@@ -15,7 +15,7 @@ const MyNavbar = () => {
                         <NavLink className="text-decoration-none text-gray me-3" to="/about">About</NavLink>
                     </Navbar.Brand>
                     <Navbar.Brand className="inline">
-                        <NavLink className="text-decoration-none text-gray me-3" to="/login">Login</NavLink>
+                        {/* <NavLink className="text-decoration-none text-gray me-3" to="/login">Login</NavLink> */}
                     </Navbar.Brand>
                 </Container>
             </Navbar>

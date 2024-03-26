@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from "react-router-dom";
 import {
     CDBSidebar,
     CDBSidebarContent,
@@ -14,21 +15,21 @@ const Sidebar = () => {
         <div style={{ display: 'flex', height: '94vh', overflow: 'scroll initial' }}>
             <CDBSidebar textColor="#fff" backgroundColor="#333">
                 <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-                    <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
+                    {/* <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
                         Sidebar
-                    </a>
+                    </a> */}
                 </CDBSidebarHeader>
 
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
-                        <NavLink exact to="/" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+                        <NavLink exact to="/doctors" activeClassName="activeClicked">
+                            <CDBSidebarMenuItem icon="columns">Doctors</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/tables" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
+                        <NavLink exact to="/patients" activeClassName="activeClicked">
+                            <CDBSidebarMenuItem icon="table">Patients</CDBSidebarMenuItem>
                         </NavLink>
-                        <NavLink exact to="/profile" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
+                        <NavLink exact to="/beds" activeClassName="activeClicked">
+                            <CDBSidebarMenuItem icon="user">Beds</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink exact to="/analytics" activeClassName="activeClicked">
                             <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
@@ -46,10 +47,11 @@ const Sidebar = () => {
                             padding: '20px 5px',
                         }}
                     >
-                        Sidebar Footer
+                        {/* Sidebar Footer */}
                     </div>
                 </CDBSidebarFooter>
             </CDBSidebar>
+            <Outlet />
         </div>
     );
 };
