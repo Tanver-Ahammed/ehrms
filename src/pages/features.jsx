@@ -1,4 +1,4 @@
-import MyNavbar from "../components/navbar";
+import MyNavbar from "../components/Navbar";
 
 const Features = () => {
     return (
