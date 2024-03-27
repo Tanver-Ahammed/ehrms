@@ -6,6 +6,7 @@ import Features from './pages/Features';
 import MainLayout from './layout/MainLayout';
 import NotFound from './pages/NotFound';
 import Home from './pages/Home';
+import {Doctors} from "./pages/Doctors";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/features' element={<Features />} />
+        <Route path='/doctors' element={<Doctors />} />
 
         <Route path='/*' element={<NotFound />} />
 

@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+section.main-content {
+  max-height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
