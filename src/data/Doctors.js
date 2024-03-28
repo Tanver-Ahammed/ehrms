@@ -1,4 +1,4 @@
-export const  Doctors =
+export const Doctors =
     [
         {
             "id": "1",
@@ -190,5 +190,3 @@ export const  Doctors =
             "image_url": "https://via.placeholder.com/150"
         }
     ]
-
-export default Doctors;
